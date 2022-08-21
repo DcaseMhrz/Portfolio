@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+ {% block content %}
+{% load static %}
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    $(".second").hide(800);
+    $(".skill").hide();
+    $(".projects").hide();
+  });
+</script>
+<div class="row" style="height: 90px">
+  <h4 class="hiremetitle flow-text center" style="margin-right:200px;" >Projects</h4>
+</div>
+
+<div class="row" style=" margin-left:10%; margin-right:10%; margin-bottom:100px;">
+{% for project in  projects%}
+<div class="col s2 m3">
+  <div class="card small">
+    <div class="card-image">
+      <img src="{% static project.image %}">
+      <span class="card-title" style="color:orange">{{project.title}}</span>
+    </div>
+    <div class="card-content">
+      <p>{{project.description}}</p>
+    </div>
+    <div class="card-action">
+      <a href="{% url 'project_details' project.pk %}">Read More</a>
+    </div>
+  </div>
+{% endfor %}
+
+  
+        
+      
+  </div>
+</div>
+
+
+{% endblock content %}

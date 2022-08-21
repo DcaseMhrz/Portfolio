@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% block content %}
+ {% load static %}
+
+<div class="row" style="height: 100%">
+  <div class="col l1">
+    <img
+      src="{% static '/helloworld/pplinkedin.jpeg' %}"
+      alt="image"
+      height="200"
+      width="200"
+      style="margin-left: 150px; 
+            border-radius: 50%;
+            border:3px solid green;
+            "
+            
+    />
+  </div>
+
+  <div class="second col l10">
+    <p
+      class="name"
+      style="
+        cursor: default;
+        font-size: 50px;
+        text-align: center;
+        text-shadow: 4px 4px #b0bec5;
+        padding-right: 10%;
+      "
+    >
+      DIKESH MAHARJAN
+    </p>
+    <a
+      class="prodev"
+      style="
+        float: right;
+        width: 100%;
+        margin-right: 200px;
+        text-align: right;
+        font-family: roboto;
+        font-size: 20px;
+        margin-top: 0px;
+        color: black;
+      "
+      >Full Stack Developer / Python / Django 
+    </a>
+    <a
+      class="prodev"
+      style="
+        float: right;
+        margin-right: 00px;
+        font-family: lovely;
+        font-size: 40px;
+        margin: 0px;
+        color: black;
+      "
+      >- Dcasemhrz
+    </a>
+  </div>
+
+  <div class="col l1"></div>
+</div>
+<div style="left: 4px; bottom: 4px; position: absolute;">
+  &copy; 2017 Dikesh Maharjan, All rights reserved.
+</div>
+{% endblock %}

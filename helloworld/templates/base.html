@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+  <html lang="en-us">
+    <head>
+    <title>DIKESH MAHARJAN</title>
+    
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{%static 'css/materialize.min.css'%}"  media="screen,projection"/>
+      <link rel="icon" href="{%static 'images/developer-icon-17862.png'%}">
+      <link rel="stylesheet" href="{%static 'css/home.css'%}">
+      <style type="text/css">
+        @font-face{
+          font-family: lovely;
+          src: url({%static 'fonts/bettergrade.ttf'%});
+        }
+      </style>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="{%static 'js/materialize.min.js'%}"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>      
+    </head>
+    <body class=" grey lighten-5">
+          <div class="main">
+      <div class="row" style="height: 90px">
+            <div class="col s1 ">
+                <a href="/" class="home btn-floating btn-large waves-effect waves-light green lighten-2" style="margin:20px;"><i class="material-icons">home</i></a>
+                </div>
+              <div class="col s9 "></div>
+              <div class="col s2"><a href="/contact" class="waves-effect waves-light btn middle tooltipped" data-position="left" data-delay="50" data-tooltip="Send a mail!" id="hire" style="float: right; margin-top: 20px" >Contact Me!</a>
+              </div>
+      </div>
+      <div class="skillrow row" style="height: 90px;">
+          <div class="col s1 offset-s11 pull-s11">
+            <a href="skills/" class="skill btn-floating btn-large waves-effect waves-light red lighten-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Skills" style="margin:20px;"><i class="material-icons">assessment</i></a>
+          </div>
+<div class="projectsrow row" style="height: 90px; width: 120px; float:left;">
+          <div class="col s1 offset-s11 pull-s11">
+            <a href="projects/" class="projects btn-floating btn-large waves-effect waves-light blue lighten-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Projects" style="margin:20px;"><i class="material-icons">work</i></a>
+          </div>
+        </div>
+
+        {% block content %}{% endblock content %}
+  
+
+           <!-- Floating menu bar bottom right -->
+        <div class="fixed-action-btn click-to-toggle" > 
+          <a class="btn-floating btn-large green tooltipped" data-position="left" data-delay="50" data-tooltip="My Digital Fingerprint!">
+            <i class="material-icons">fingerprint</i>
+          </a>
+          <ul>
+            <li><a href="CV.pdf" class="btn-floating red tooltipped" data-position="left" data-tooltip="Download CV"><i class="material-icons" >file_download</i></a></li>
+            <li><a href="https://www.github.com/dcasemhrz" target="_blank" data-position="left" class="btn-floating tooltipped" data-tooltip="Github"><img src="{% static 'images/github.png' %} " height="100%" width="100%"></a></li>
+            <li><a href="https://www.twitter.com/dcasemhrz" target="_blank" class="btn-floating tooltipped" data-position="left" data-tooltip="Twitter"><img src="{% static 'images/twitter.png' %} " height="100%" width="100%"></a></li>
+            
+          </ul>
+        </div>
+
+        
+
+</div>
+    </body>
+  </html>
